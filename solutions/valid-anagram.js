@@ -30,3 +30,21 @@ const isAnagram = (s, t) => {
 };
 
 console.log(isAnagram(s, t));
+
+let a = "snowball";
+let b = "snowflake";
+
+const anagramChecker = (a, b) => {
+    if (a.length !== b.length) {
+        return false;
+    }
+
+    let aSort = a.split('').sort().join();
+    let bSort = b.split('').sort().join();
+
+    if (aSort === bSort) {
+        return true;
+    }
+};
+
+console.log(anagramChecker(a, b));
